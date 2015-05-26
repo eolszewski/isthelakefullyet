@@ -58,6 +58,7 @@ public class MainActivity extends Activity {
         }
         else {
             loadingProgressBar.setVisibility(View.GONE);
+            yesNoTextView.setTextSize(20);
             yesNoTextView.setText("PLEASE CHECK YOUR NETWORK CONNECTIVITY");
         }
     }
@@ -80,6 +81,7 @@ public class MainActivity extends Activity {
         @Override
         protected void onPostExecute(String level) {
             if (level.equals("Error")) {
+                yesNoTextView.setTextSize(20);
                 yesNoTextView.setText("PROBLEMS CONNECTING TO golaketravis.com, PLEASE TRY AGAIN LATER");
             }
             else {
